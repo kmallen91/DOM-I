@@ -45,3 +45,50 @@ let navanchors = document.getElementsByTagName('a');
 for (let i=0; i<6; i++){
   navanchors[i].innerHTML = siteContent.nav[`nav-item-${i+1}`]
 }
+
+// HEADER
+let ctatext = document.getElementsByClassName('cta-text');
+
+ctatext[0].children[0].innerHTML = "DOM <br> Is <br> Awesome";
+ctatext[0].children[1].textContent = "Get Started";
+let headimg = document.getElementById('cta-img');
+headimg.setAttribute('src', siteContent["cta"]['img-src']);
+
+//TOP CONTENT
+let topcontent = document.getElementsByClassName('top-content');
+
+//FEATURES
+topcontent[0].children[0].children[0].innerHTML = "Features";
+topcontent[0].children[0].children[1].textContent = siteContent['main-content']['features-content'];
+
+//ABOUT
+topcontent[0].children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topcontent[0].children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+// MID IMAGE
+let midimage = document.getElementById('middle-img');
+midimage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// BOTTOM CONTENT
+let bottomcontent = document.getElementsByClassName('bottom-content');
+
+// SERVICES
+bottomcontent[0].children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bottomcontent[0].children[0].children[1].textContent = siteContent['main-content']['services-content'];
+// PRODUCT
+bottomcontent[0].children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bottomcontent[0].children[1].children[1].textContent = siteContent['main-content']['product-content'];
+// VISION
+bottomcontent[0].children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomcontent[0].children[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+//CONTACT
+let contact = document.getElementsByClassName('contact')[0];
+contact.children[0].textContent = siteContent['contact']['contact-h4'];
+contact.children[1].textContent = siteContent['contact']['address'];
+contact.children[2].textContent = siteContent['contact']['phone'];
+contact.children[3].textContent = siteContent['contact']['email'];
+
+// FOOTER
+let footer = document.getElementsByTagName('footer')[0];
+footer.children[0].textContent = siteContent['footer']['copyright'];
